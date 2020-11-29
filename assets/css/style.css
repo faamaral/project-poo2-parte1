@@ -1,0 +1,5 @@
+table, td {
+    background: aquamarine;
+    border-collapse: collapse;
+    border: 1px solid red;
+}

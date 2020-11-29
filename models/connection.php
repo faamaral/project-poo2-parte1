@@ -2,12 +2,12 @@
 
 define('db_name','trabalho_1');
 define('end', 'localhost');
-define('user', 'root');
+define('user', 'root1');
 define('password', '12344321');
 
 try 
 {
-    $pdo = new PDO('mysql:host='.end.'; dbname='.db_name,user,passoword);
+    $pdo = new PDO('mysql:host='.end.'; dbname='.db_name,user,password);
 } 
 catch (PDOException $e)
 {
