@@ -6,6 +6,11 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Testing</h1>
+    <div class="Title">
+        <h1><a href="views/show.php">Show all products</a></h1>
+    </div>
+    <div>
+        <h1><a href="views/register_new.php">Insert a new product</a></h1>
+    </div>
 </body>
 </html>
