@@ -10,12 +10,10 @@
             'amount' => $amount,
             'price' => $price
         ]);
-        $message = "Fail";
 
         if ($p->insertNew($pdo,$p->name, $p->manufacturer,$p->amount, $p->price))
         {
-            $message = "Sucess";
-            return $message;
+            return 1;
         }
-        return $message;
+        return 0;
     }

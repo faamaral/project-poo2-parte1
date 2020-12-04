@@ -27,9 +27,14 @@ class Product{
 
     public function insertNew($pdo, $name, $manufacturer, $amount, $price)
     {
-        $query = "INSERT INTO product ('name', 'manufacturer', 'amount', 'price') VALUES ('?,?,?,?')";
+        $query = "INSERT INTO product ('name', 'manufacturer', 'amount', 'price') VALUES (':name', ':manufacturer',':amount',':price' )";
         $save = $pdo->prepare($query);
-        $result = $save->execute($name, $manufacturer, $amount, $price);
+        $save->bindParam(":name",$name);
+        $save->bindParam(":manufacturer",$manufacturer);
+        $save->bindParam(":amount",$amount);
+        $save->bindParam(":price",$price);
+        $result = $save->execute();
+        //$result = $save->execute($name, $manufacturer, $amount, $price);
         if ($result)
         {
             return true;

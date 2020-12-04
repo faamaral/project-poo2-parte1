@@ -13,6 +13,7 @@
     <title>Insert new product</title>
 </head>
 <body>
+    
     <h1>Insert a new product</h1>
 
     <form action="register_new.php" method="post">
@@ -31,8 +32,8 @@
     <?php
         if (isset($_POST['submit']))
         {
-            $result = setData($pdo, $_POST['name_prod'], $_POST['manufacturer_prod'], $_POST['amount_prod'], $_POST['price']);
-            if ($result == 'Sucess')
+            $result = setData($pdo, $_POST['name_prod'], $_POST['manufacturer_prod'], $_POST['amount_prod'], $_POST['price_prod']);
+            if ($result == 1)
             {
                 echo 'Product sucessfully inserted';
             }
